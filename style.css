@@ -42,7 +42,7 @@ div{
 }
 p{
     font-weight: bolder;
-    letter-spacing: px;
+    line-height: 1.5;
 }
 main h1, main h2, h3{
     color: yellow;
