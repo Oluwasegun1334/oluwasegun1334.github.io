@@ -54,7 +54,8 @@ li{
     margin-bottom: 10px;
     text-align: left;
     margin-left: 20px;
-    font-weight: bolder;   
+    font-weight: bolder; 
+    line-height: 1.75;
 }
 li::marker{
     color: yellow;
