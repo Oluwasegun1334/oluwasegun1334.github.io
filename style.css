@@ -48,7 +48,7 @@ main h1, main h2, h3{
     color: yellow;
 }
 h2{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 li{
     margin-bottom: 10px;
@@ -125,9 +125,6 @@ footer p{
 .div5 li{
     list-style-type: none;
     margin: -10px 0 25px 25px;
-}
-.div5 h2{
-    margin-bottom: 15px;
 }
 .div6 img,.div5 img{
     width: 15px;
