@@ -34,7 +34,7 @@ div{
     width: 90%;
     margin: auto;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 .div1{
     padding-top: 90px;
@@ -48,14 +48,13 @@ main h1, main h2, h3{
     color: yellow;
 }
 h2{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 li{
     margin-bottom: 10px;
     text-align: left;
     margin-left: 20px;
-    font-weight: bolder; 
-    line-height: 1.75;
+    font-weight: bolder;
 }
 li::marker{
     color: yellow;
@@ -120,7 +119,14 @@ footer p{
         transform: scale(1.125);
     }
 }
-.div6 img{
+.div5 h3{
+    margin: 0;
+}
+.div5 li{
+    list-style-type: none;
+    margin: -10px 0 25px 25px;
+}
+.div6 img,.div5 img{
     width: 15px;
     margin-right: 10px;
 }
@@ -128,7 +134,7 @@ footer p{
     list-style-type: none;
     margin: 0;
 }
-.div6 span{
+.div6 span,.div5 span{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
