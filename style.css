@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: linear-gradient(to bottom right,black, rgb(150, 0, 0), black );
+    background-attachment: fixed;
+    color: white;
+    font-family: jura;
+}
+header{
+    position: fixed;
+    width: 100%;
+    background-image: linear-gradient(to bottom right,black, rgb(150, 0, 0), black );
+    background-attachment: fixed;
+    z-index: 1;
+}
+.headdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    text-align: left;
+}
+hr{
+    border: white 1px solid;
+}
+header img{
+    width: 75px;
+    margin-right: 5px;
+}
+div{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 25px;
+}
+.div1{
+    padding-top: 90px;
+    margin-top: 0;
+}
+p{
+    font-weight: bolder;
+    letter-spacing: px;
+}
+main h1, main h2, h3{
+    color: yellow;
+}
+h2{
+    margin-bottom: 10px;
+}
+li{
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 20px;
+    font-weight: bolder;   
+}
+li::marker{
+    color: yellow;
+}
+img{
+    width: 100%;
+}
+.container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 90%;
+}
+.box{
+    width: 75%;
+    margin-bottom: 10px;
+    border: white solid 2px;
+    border-radius: 25px;
+    transform:  translateX(-200%);
+    transition: transform 1s ;
+}
+.box:nth-child(even){
+    align-self: flex-end;
+    transform: translateX(200%);
+}
+.box.show{
+    transform: translateX(0);
+}
+button{
+    padding: 25px;
+    background-color: yellow;
+    border-radius: 50px;
+    border: none;
+    color: black;
+    font-weight: bolder;
+    font-size: large;
+    animation: beat 1s infinite;
+    font-family: jura;
+}
+.div8{
+    background-color: white;
+    color: rgb(150, 0, 0);
+    padding: 15px;
+}
+main hr{
+    margin-top: 25px;
+}
+footer{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    margin-top: 5px;
+}
+footer p{
+    text-align: left;
+    margin-bottom: 10px;
+}
+@keyframes beat {
+    50%{
+        transform: scale(1.125);
+    }
+}
+.div6 img{
+    width: 15px;
+    margin-right: 10px;
+}
+.div6 li{
+    list-style-type: none;
+    margin: 0;
+}
+.div6 span{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
