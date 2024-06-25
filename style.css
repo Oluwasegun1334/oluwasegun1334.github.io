@@ -126,6 +126,9 @@ footer p{
     list-style-type: none;
     margin: -10px 0 25px 25px;
 }
+.div5 h2{
+    margin-bottom: 15px;
+}
 .div6 img,.div5 img{
     width: 15px;
     margin-right: 10px;
