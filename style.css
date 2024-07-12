@@ -1,34 +1,14 @@
 *{
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 body{
-    background-image: linear-gradient(to bottom right,black, rgb(150, 0, 0), black );
+    font-family: Nunito;
+    background-image: linear-gradient(to bottom right,black, #800000, black );
     background-attachment: fixed;
     color: white;
-    font-family: jura;
-}
-header{
-    position: fixed;
-    width: 100%;
-    background-image: linear-gradient(to bottom right,black, rgb(150, 0, 0), black );
-    background-attachment: fixed;
-    z-index: 1;
-}
-.headdiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-    text-align: left;
-}
-hr{
-    border: white 1px solid;
-}
-header img{
-    width: 75px;
-    margin-right: 5px;
+    font-weight: bolder;
 }
 div{
     width: 90%;
@@ -37,36 +17,39 @@ div{
     margin-top: 25px;
 }
 .div1{
-    padding-top: 90px;
-    margin-top: 0;
+    width: 95%;
 }
-p{
-    font-weight: bolder;
-    line-height: 1.75;
-}
-main h1, main h2, h3{
-    color: yellow;
+h1, h2, h3{
+    color: rgb(0, 225, 0);
 }
 h2{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+ul{
+    list-style-type: none;
 }
 li{
-    margin-bottom: 10px;
     text-align: left;
-    margin-left: 20px;
-    font-weight: bolder;
+    margin-bottom: 10px;
 }
-li::marker{
-    color: yellow;
+.divli img{
+    width: 15px;
+    margin-right: 10px;
 }
-img{
-    width: 100%;
+.divli span{
+    display: flex;
+    align-items: center;
+}
+
+.a li{
+    margin-bottom: 0;
+}
+.a span, p{
+    margin-bottom: 10px;
 }
 .container{
-    margin: auto;
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
     overflow: hidden;
     width: 90%;
 }
@@ -75,33 +58,17 @@ img{
     margin-bottom: 10px;
     border: white solid 2px;
     border-radius: 25px;
-    transform:  translateX(-200%);
     transition: transform 1s ;
 }
 .box:nth-child(even){
     align-self: flex-end;
-    transform: translateX(200%);
 }
-.box.show{
-    transform: translateX(0);
-}
-button{
-    padding: 25px;
-    background-color: yellow;
-    border-radius: 50px;
-    border: none;
-    color: black;
-    font-weight: bolder;
-    font-size: large;
-    animation: beat 1s infinite;
-    font-family: jura;
-}
-.div8{
+.div4{
+    color: #800000;
     background-color: white;
-    color: rgb(150, 0, 0);
     padding: 15px;
 }
-main hr{
+hr{
     margin-top: 25px;
 }
 footer{
@@ -114,28 +81,125 @@ footer p{
     text-align: left;
     margin-bottom: 10px;
 }
-@keyframes beat {
-    50%{
-        transform: scale(1.125);
+.butdiv{
+    overflow: hidden;
+}
+button{
+    padding: 25px;
+    background-color: rgb(0, 225, 0);
+    border-radius: 50px;
+    border: none;
+    color: black;
+    font-weight: bolder;
+    font-size: large;
+    font-family: Nunito;
+    transform: translateX(200%);
+    transition: transform 1s;
+}
+button.show{
+    transform: translateX(0);
+}
+.quizbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100svh;
+    padding-bottom: 350px;
+    margin-top: 30px;
+}
+.quizbody h1{
+    color: white;
+}
+.quizbody li{
+    margin-left: 20px;
+}
+.progress{
+    background-color: black;
+    height: 20px;
+    margin: auto;
+    border-radius: 25px;
+    text-align: left;
+}
+.fill{
+    background: linear-gradient(45deg, rgb(100, 225, 100) 25%, transparent 25%,transparent 50%,rgb(100, 225, 100) 50%, rgb(100, 225, 100) 75%,transparent 75%,transparent);
+    background-size: 20px;
+    border-radius: 25px;
+}
+@keyframes move {
+    100%{
+        background-position: 20px 0px;
     }
 }
-.div5 h3{
+@keyframes slide1 {
+    to{
+        width: 20%;
+    }
+}
+@keyframes slide2 {
+    to{
+        width: 40%;
+    }
+}
+@keyframes slide3 {
+    to{
+        width: 60%;
+    }
+}
+@keyframes slide4 {
+    to{
+        width: 80%;
+    }
+}
+@keyframes slide5 {
+    to{
+        width: 100%;
+    }
+}
+.b{
+    background-color: rgb(0, 125, 0);
+    width: 0%;
+    height: 100%;
     margin: 0;
+    animation: move 0.5s linear infinite, slide1 0.5s 1s linear forwards;
 }
-.div5 li{
-    list-style-type: none;
-    margin: -10px 0 25px 25px;
-}
-.div6 img,.div5 img{
-    width: 15px;
-    margin-right: 10px;
-}
-.div6 li{
-    list-style-type: none;
+.c{
+    background-color: rgb(0, 125, 0);
+    width: 20%;
+    height: 100%;
     margin: 0;
+    animation: move 0.5s linear infinite, slide2 0.5s 1s linear forwards;
 }
-.div6 span,.div5 span{
+.d{
+    background-color: rgb(0, 125, 0);
+    width: 40%;
+    height: 100%;
+    margin: 0;
+    animation: move 0.5s linear infinite, slide3 0.5s 1s linear forwards;
+}
+.e{
+    background-color: rgb(0, 125, 0);
+    width: 60%;
+    height: 100%;
+    margin: 0;
+    animation: move 0.5s linear infinite, slide4 0.5s 1s linear forwards;
+}
+.f{
+    background-color: rgb(0, 125, 0);
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    animation: move 0.5s linear infinite, slide5 0.5s 1s linear forwards;
+}
+.div6{
+    text-align: left;
+}
+.div8 button{
+    width: 175px;
+    transition: none;
+    transform: translateX(0);
+}
+.div8{
     display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    justify-content: space-between;
 }
+
