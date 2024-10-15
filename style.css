@@ -1,75 +1,98 @@
 *{
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 body{
-    font-family: Nunito;
-    background-image: linear-gradient(to bottom right,black, #800000, black );
+    background-image: url(images/26551641.jpg);
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
-    color: white;
+    font-family: Nunito;
+    text-align: center;
     font-weight: bolder;
+    color: black;
 }
 div{
     width: 90%;
     margin: auto;
-    text-align: center;
     margin-top: 25px;
 }
 .div1{
-    width: 95%;
+    width: 97.5%;
 }
-h1, h2, h3{
-    color: rgb(0, 225, 0);
+.div3 img{
+    width: 100%;
 }
-h2{
-    margin-bottom: 10px;
-}
-ul{
-    list-style-type: none;
+h1, h2, h3, b, li::marker{
+    color: red;
 }
 li{
     text-align: left;
+}
+p{
     margin-bottom: 10px;
 }
-.divli img{
+li{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.div6 img{
     width: 15px;
     margin-right: 10px;
 }
-.divli span{
+.div6 span{
     display: flex;
     align-items: center;
-}
-
-.a li{
-    margin-bottom: 0;
-}
-.a span, p{
     margin-bottom: 10px;
+}
+.div6 li{
+    margin-bottom: 0;
+    list-style-type: none;
+    margin-left: 0;
+}
+img{
+    width: 100%;
 }
 .container{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    width: 90%;
 }
 .box{
     width: 75%;
     margin-bottom: 10px;
-    border: white solid 2px;
+    border: red solid 2px;
     border-radius: 25px;
+    transform:  translateX(-200%);
     transition: transform 1s ;
 }
 .box:nth-child(even){
     align-self: flex-end;
+    transform: translateX(200%);
 }
-.div4{
-    color: #800000;
-    background-color: white;
-    padding: 15px;
+.box.show{
+    transform: translateX(0);
+}
+.butdiv button{
+    padding: 25px;
+    background-color: red;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    animation: beat 1s infinite;
+    font-family: Nunito;
+}
+@keyframes beat {
+    50%{
+        transform: scale(1.125);
+    }
 }
 hr{
     margin-top: 25px;
+    border-color: red;
 }
 footer{
     width: 90%;
@@ -81,24 +104,6 @@ footer p{
     text-align: left;
     margin-bottom: 10px;
 }
-.butdiv{
-    overflow: hidden;
-}
-button{
-    padding: 25px;
-    background-color: rgb(0, 225, 0);
-    border-radius: 50px;
-    border: none;
-    color: black;
-    font-weight: bolder;
-    font-size: large;
-    font-family: Nunito;
-    transform: translateX(200%);
-    transition: transform 1s;
-}
-button.show{
-    transform: translateX(0);
-}
 .quizbody{
     display: flex;
     flex-direction: column;
@@ -108,27 +113,66 @@ button.show{
     margin-top: 30px;
 }
 .quizbody h1{
-    color: white;
+    color: red;
 }
 .quizbody li{
     margin-left: 20px;
 }
 .progress{
     background-color: black;
-    height: 20px;
+    height: 2px;
     margin: auto;
-    border-radius: 25px;
     text-align: left;
+    display: flex;
+    align-items: center;
 }
-.fill{
-    background: linear-gradient(45deg, rgb(100, 225, 100) 25%, transparent 25%,transparent 50%,rgb(100, 225, 100) 50%, rgb(100, 225, 100) 75%,transparent 75%,transparent);
-    background-size: 20px;
-    border-radius: 25px;
+.a{
+    background-color: red;
+    background-size: 2px;
+    width: 0%;
+    height: 100%;
+    animation: slide1 2s 0.5s forwards;
+    margin: 0;
 }
-@keyframes move {
-    100%{
-        background-position: 20px 0px;
-    }
+.b{
+    background-color: red;
+    background-size: 2px;
+    width: 20%;
+    height: 100%;
+    animation: slide2 2s 0.5s forwards;
+    margin: 0;
+}
+.c{
+    background-color: red;
+    background-size: 2px;
+    width: 40%;
+    height: 100%;
+    animation: slide3 2s 0.5s forwards;
+    margin: 0;
+}
+.d{
+    background-color: red;
+    background-size: 2px;
+    width: 60%;
+    height: 100%;
+    animation: slide4 2s 0.5s forwards;
+    margin: 0;
+}
+.e{
+    background-color: red;
+    background-size: 2px;
+    width: 80%;
+    height: 100%;
+    animation: slide5 2s 0.5s forwards;
+    margin: 0;
+}
+.circle{
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    margin: 0;
+    box-shadow: 0px 0px 10px 7px red;
 }
 @keyframes slide1 {
     to{
@@ -155,50 +199,30 @@ button.show{
         width: 100%;
     }
 }
-.b{
-    background-color: rgb(0, 125, 0);
-    width: 0%;
-    height: 100%;
-    margin: 0;
-    animation: move 0.5s linear infinite, slide1 0.5s 1s linear forwards;
-}
-.c{
-    background-color: rgb(0, 125, 0);
-    width: 20%;
-    height: 100%;
-    margin: 0;
-    animation: move 0.5s linear infinite, slide2 0.5s 1s linear forwards;
-}
-.d{
-    background-color: rgb(0, 125, 0);
-    width: 40%;
-    height: 100%;
-    margin: 0;
-    animation: move 0.5s linear infinite, slide3 0.5s 1s linear forwards;
-}
-.e{
-    background-color: rgb(0, 125, 0);
-    width: 60%;
-    height: 100%;
-    margin: 0;
-    animation: move 0.5s linear infinite, slide4 0.5s 1s linear forwards;
-}
-.f{
-    background-color: rgb(0, 125, 0);
-    width: 80%;
-    height: 100%;
-    margin: 0;
-    animation: move 0.5s linear infinite, slide5 0.5s 1s linear forwards;
-}
-.div6{
+.div9{
     text-align: left;
 }
-.div8 button{
-    width: 150px;
+.div11 button{
+    width: 175px;
     transition: none;
     transform: translateX(0);
 }
-.div8{
+.div11{
+    display: flex;
+    justify-content: space-between;
+}
+.div12 button{
+    width: 175px;
+    padding: 25px;
+    background-color: red;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    font-family: Nunito;
+}
+.div12{
     display: flex;
     justify-content: space-between;
 }
